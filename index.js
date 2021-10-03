@@ -1,7 +1,14 @@
 async function showDeck(){
+    // disable button until finished
+    var show_deck_btn = document.getElementById("show-deck-btn");
+    show_deck_btn.disabled = true;
+
     // refresh page
     var container_right = document.getElementById("container-right");
     container_right.remove();
+
+    // card counter
+    var card_counter = 0;
 
     var outer_container_right = document.getElementById("outer-container-right");
     outer_container_right.innerHTML = '<div id="container-right"></div>';
@@ -14,6 +21,7 @@ async function showDeck(){
             continue;
         }
         var count = lines[i].charAt(0);
+        card_counter += parseInt(count);
 
         var link_name = lines[i].substring(2);
         var card_id = '';
@@ -34,6 +42,11 @@ async function showDeck(){
                 }
             }
       }
+
+      //enable button again when finished
+      show_deck_btn.disabled = false;
+
+      document.getElementById("card-count").innerHTML = "Card Count: " + card_counter;
 }
 
 async function createBox(card_url, card_id, count){
