@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Collective Deck</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    
+    <script src="jquery-3.5.1.min.js"></script>
+    </head>
+  <body>
+    <div id="main" class="container">
+        <div class="row justify-content-around">
+            <div id="container-left" class="col-4">
+    
+            <div>
+            <textarea id="decklist">
+# Entrance Splash
+# Hero: Ashgerdy
+3 N3ON Tenkai Palm
+3 Reoccuring Accident
+1 Ring The Bell
+3 Albatross Daredevil
+3 Chromablade Assasin
+3 Dead-Eye Harpoonist
+3 Enchanted Incense
+3 Fishman Swashbuckler
+3 Dire Chupacabra
+3 Doragon Crossbowman
+1 Fruzzle
+3 N3ON Hotwire Sentry
+3 N3ON Phoenix
+2 P.I.G.E.O.N
+3 Portside Abductor
+3 Ghost in the Code
+2 Wshod the Corsair</textarea>
+        
+            </div>
+        
+            <button onClick="showDeck()">Show Deck</button>
+      </div>
+
+      <div class="col-8" id="outer-container-right">
+        <div id="container-right"></div>
+      </div>
+        </div>  
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>
