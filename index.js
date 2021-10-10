@@ -22,6 +22,7 @@ async function showDeck(){
         }
         var count = lines[i].charAt(0);
         card_counter += parseInt(count);
+        document.getElementById("card-count").innerHTML = "Card Count: " + card_counter;
 
         var link_name = lines[i].substring(2);
         var card_id = '';
@@ -57,8 +58,6 @@ async function showDeck(){
 
       //enable button again when finished
       show_deck_btn.disabled = false;
-
-      document.getElementById("card-count").innerHTML = "Card Count: " + card_counter;
 }
 
 // TODO: figure out px for tooltip size increase
