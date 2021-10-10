@@ -76,11 +76,10 @@ textarea{
 
 .tooltip-image{
     position: absolute;
-    transform: translate(-10%,20%);
+    transform: translate(-35%,12%);
     visibility: hidden;
     pointer-events: none;
     z-index: 1;
-    width: 340px;
 }
 
 .card-box:hover .tooltip-image{
