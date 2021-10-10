@@ -48,7 +48,7 @@ async function showDeck(){
             for(var card of public_cards_data.cards){
                 //console.log('cardname: '+card.name);
                 //console.log('linkname: '+link_name);
-                if(card.name == link_name){
+                if(card.name.localeCompare(link_name, undefined, { sensitivity: 'base' }) === 0){
                     card_id = /(?<=\/p\/cards\/)(.*?)(?=...png)/.exec(card.imgurl);
                     await createBox(card.imgurl, card_id[0], count);
                   }
